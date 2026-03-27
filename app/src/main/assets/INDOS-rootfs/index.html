@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDOS | Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; scroll-behavior: smooth; }
+        .code-block { background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 0.5rem; font-family: monospace; }
+        .btn-download { transition: all 0.3s ease; transform: translateY(0); }
+        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="text-gray-900 leading-relaxed">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">🇮🇩</span>
+                    <span class="text-xl font-bold tracking-tight">INDOS <span class="text-blue-600">Docs</span></span>
+                </div>
+                <div class="flex space-x-6 text-sm font-medium text-gray-600">
+                    <a href="https://github.com/hastagaming/INDOS" class="hover:text-blue-600 transition underline underline-offset-4">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row gap-12">
+        
+        <aside class="w-full md:w-64 flex-shrink-0">
+            <nav class="space-y-1 sticky top-24">
+                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Daftar Isi</p>
+                <a href="#pengantar" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Pengantar</a>
+                <a href="#instalasi" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Instalasi Termux</a>
+                <a href="#virtualmachine" class="block px-3 py-2 text-blue-600 bg-blue-50 rounded-md font-medium">Virtual Machine</a>
+                <a href="#downloads" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Downloads</a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 min-w-0">
+            <section id="pengantar" class="mb-16">
+                <h1 class="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Mengenal INDOS</h1>
+                <p class="text-lg text-gray-600">
+                    <strong>INDOS (Indonesia OS)</strong> kini mendukung penggunaan di lingkungan Virtual Machine (VM). Nikmati sistem operasi yang ringan dan stabil, baik di dalam Termux maupun sebagai guest OS.
+                </p>
+            </section>
+
+            <section id="virtualmachine" class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Dukungan VM</h2>
+                <p class="mb-4 text-gray-600">INDOS versi saat ini dioptimalkan untuk terminal-only (CLI) dan kompatibel dengan:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                    <li><strong>Limbo PC Emulator</strong> (Android)</li>
+                    <li><strong>Vectras VM</strong> (Android/iOS)</li>
+                    <li><strong>QEMU</strong> (Linux/Windows/macOS)</li>
+                </ul>
+                <div class="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500 text-amber-700 text-sm">
+                    <strong>Informasi:</strong> Mode GUI belum tersedia. Sistem akan langsung masuk ke shell Prompt NASA-CORE setelah booting.
+                </div>
+            </section>
+
+            <section id="downloads" class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Downloads</h2>
+                <p class="mb-8 text-gray-600">Pilih format citra disk yang sesuai dengan emulator kamu:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 border border-gray-200 rounded-2xl bg-white shadow-sm flex flex-col items-center text-center">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">ISO</div>
+                        <h3 class="font-bold text-gray-900 mb-2">INDOS Minimal (ISO)</h3>
+                        <p class="text-sm text-gray-500 mb-6">Cocok untuk instalasi CD-ROM standar di Limbo atau VM lainnya.</p>
+                        <a href="https://github.com/hastagaming/INDOS/raw/main/INDOS.iso" class="btn-download w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700">Download .ISO</a>
+                    </div>
+
+                    <div class="p-6 border border-gray-200 rounded-2xl bg-white shadow-sm flex flex-col items-center text-center">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">Q2</div>
+                        <h3 class="font-bold text-gray-900 mb-2">INDOS Disk (QCOW2)</h3>
+                        <p class="text-sm text-gray-500 mb-6">Format asli QEMU yang mendukung snapshot dan performa lebih cepat.</p>
+                        <a href="https://github.com/hastagaming/INDOS/raw/main/INDOS.qcow2" class="btn-download w-full py-3 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700">Download .QCOW2</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="instalasi" class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Instalasi Termux</h2>
+                <div class="code-block text-sm overflow-x-auto">
+                    <code>git clone https://github.com/hastagaming/INDOS && cd INDOS && ./install.sh</code>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-white border-t border-gray-200 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm italic">Project INDOS &copy; 2026 by hastagaming. Built for Mobile Power Users.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
